@@ -37,7 +37,7 @@ class Agente:
         
         if(self.sensorComida(ambiente)):
             print("Ação: encher recipiente da Comida")
-            self.atuadorComida(ambiente,6)
+            self.atuadorComida(ambiente,10)
         else:
             print("Ação: recipiente da comida cheio, não fazer nada")
               
