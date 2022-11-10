@@ -26,15 +26,13 @@ class Agente:
         ComidaRecipiente = ambiente.getRecipienteComida()
 
         print("Peso do recipiente da Agua =",AguaRecipiente)
-        print("Peso do recipiente da Comida =",ComidaRecipiente)
-
         if(self.sensorAgua(ambiente)):
             print("Ação: encher recipiente da Agua")
             self.atuadorAgua(ambiente,6)
         else:
             print("Ação: recipiente da agua cheio, não fazer nada")
             
-        
+        print("Peso do recipiente da Comida =",ComidaRecipiente)
         if(self.sensorComida(ambiente)):
             print("Ação: encher recipiente da Comida")
             self.atuadorComida(ambiente,10)
