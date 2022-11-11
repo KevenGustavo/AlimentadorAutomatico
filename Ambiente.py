@@ -4,9 +4,9 @@ class Ambiente:
     recipienteAgua = 0
     recipienteComida = 0
 
-    def __init__(self):
-        self.recipienteAgua = random.randrange(6)
-        self.recipienteComida = random.randrange(10)
+    def __init__(self, numAgua, numComida):
+        self.recipienteAgua = random.randrange(numAgua)
+        self.recipienteComida = random.randrange(numComida)
 
     def getAmbienteTotal(self):
         print("Recipiente de Agua =",self.recipienteAgua)
