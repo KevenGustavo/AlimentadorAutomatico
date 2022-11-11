@@ -5,7 +5,7 @@ class Agente:
 
     def sensorAgua(self, ambiente):
         AguaRecipiente = ambiente.getRecipienteAgua()
-        print("\nSensor: peso do recipiente da Agua =",AguaRecipiente)
+        print("-Sensor: Peso do recipiente da Agua =",AguaRecipiente)
         if (AguaRecipiente < 3):
             return True
         else:
@@ -13,7 +13,7 @@ class Agente:
     
     def sensorComida(self, ambiente):
         ComidaRecipiente = ambiente.getRecipienteComida()
-        print("\nPeso do recipiente da Comida =",ComidaRecipiente)
+        print("-Sensor: Peso do recipiente da Comida =",ComidaRecipiente)
         if (ComidaRecipiente < 5):
             return True
         else:
@@ -26,17 +26,19 @@ class Agente:
         ambiente.setRecipienteComida(num)
     
     def iniciarAgente(self, ambiente):
-
+        
+        print("\n#Recipiente da Agua:")
         if(self.sensorAgua(ambiente)):
-            print("Ação: recipiente abaixo do limite, encher recipiente da Agua")
+            print("-Ação: Recipiente abaixo do limite, encher recipiente da Agua")
             self.atuadorAgua(ambiente,6)
         else:
-            print("Ação: recipiente da agua cheio, não fazer nada")
-            
+            print("-Ação: Recipiente acima do limite, não fazer nada")
+        
+        print("#Recipiente de Comida:")
         if(self.sensorComida(ambiente)):
-            print("Ação:  recipiente abaixo do limite, encher recipiente da Comida")
+            print("-Ação: Recipiente abaixo do limite, encher recipiente da Comida")
             self.atuadorComida(ambiente,10)
         else:
-            print("Ação: recipiente da comida cheio, não fazer nada")
+            print("-Ação: Recipiente acima do limite, não fazer nada")
               
     

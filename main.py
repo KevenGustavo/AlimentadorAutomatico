@@ -4,4 +4,7 @@ from Ambiente import Ambiente
 ambiente = Ambiente()
 alimnentador = Agente()
 
-alimnentador.iniciarAgente(ambiente)
+for x in range(5):
+    alimnentador.iniciarAgente(ambiente)
+    ambiente.passarTempo()
+

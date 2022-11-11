@@ -23,3 +23,8 @@ class Ambiente:
     
     def getRecipienteComida(self):
         return self.recipienteComida
+
+    def passarTempo(self):
+        print("\n-=Passando o tempo no ambiente=-")
+        self.recipienteAgua -= random.randrange(self.recipienteAgua)
+        self.recipienteComida -= random.randrange(self.recipienteComida)
